@@ -653,7 +653,26 @@ footer {
 .project-image {
     float: left;
 }
-
+.rect-img {
+    width: 300px;
+    height:300px;
+    object-fit: contain;
+  }
+  .rect-img-middle {
+    width: 300px;
+    height:350px;
+    object-fit: contain;
+  }
+  .rect-img-big {
+    width: 300px;
+    height:400px;
+    object-fit: contain;
+  }
+  .rect-img-extra-big {
+    width: 300px;
+    height:480px;
+    object-fit: contain;
+  }
 .project-info {
     position: absolute;
     top: 50%;
@@ -666,12 +685,14 @@ footer {
         font-weight: 300;
         color: $heading;
         margin: 0 0 15px 0;
+        text-align:center;
     }
 
     p {
         color: $text;
         margin: 0 0 15px 0;
         font-size: 0.9em;
+        text-align:left;
     }
 }
 

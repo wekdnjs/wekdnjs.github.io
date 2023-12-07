@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dawon's Portfolio</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Project Details</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img class = "rect-img-extra-big" src="images/kakaowork_messaging.png" onclick="window.open(this.src)"/>
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Messaging</h3> <b>
+                        <p>Language : Swift</p>
+                        <p>Framework : UIKit, AppKit, RxSwift</p> </b>
+                        <p>KakaoWork 프로젝트 빌드업 시 메시징 관련 업무 위주로 진행</p>
+                        <p>📰 링크 스크랩 : 메시지 텍스트에서 URL link를 탐지하여 스크랩 정보(대표 이미지, 타이틀, 디스크립션등)를 노출하는 기능 개발</p>
+                        <p>🚨 공지 : 전송 완료된 메시지를 공지로 등록하고 채팅방 상단에 표시, 모아보기할 수 있는 기능 개발</p>
+                        <p>📩 답장 : 전송 완료된 메시지에 답장하는 기능 개발 </p>
+                        <p>🚀 전달 : 멤버, 채팅방, 나에게 전달하는 기능 개발</p>
+                        <p>🗑️ 삭제 : 메시지를 삭제하는 기능 개발</p>
+                        <p>🤾🏼‍♂️ 메시지 점프 : 공지, 답장 메시지나 검색된 메시지 선택 시 원본 메시지 위치로 이동하는 기능 개발</p>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img class = "rect-img-big" src="images/bundleOfPhotos.png" onclick="window.open(this.src)"/>
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>사진 묶어보내기</h3>
+                        <b><p>Language : Swift</p>
+                        <p>Framework : RxSwift, SwiftUI</p></b>
+                        <p> 여러장의 사진을 하나의 메시지로 묶어 전송하는 기능 개발</p>
+                        <p>🏙️ 사진 묶음 전송 및 전달 기능, 알림 스펙 적용</p>
+                        <p>🏙️ 업로드/다운로드 시 진행 상황 UI처리</p>
+                        <p>🏙️ 전송 실패 또는 업로드/다운로드 중단 시의 예외 처리(중단 시점부터 재전송/다운로드)</p>
+                        <p>🏙️ 사진묶음 말풍선(이미지 및 gif) UI 추가 및 우클릭 처리(저장/폴더열기)</p>
+                        <p>🏙️ 묶음 사진 미리보기 및 상세화면에 캐러셀형태의 UI 적용</p>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+                <div class="project no-image">
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Notification</h3>
+                        <b><p>Language : Swift</p>
+                        <p>Framework : RxSwift</p></b>
+                        <p>🔔 메시지 수신 시 알림 노출 및 알림 설정(on/off, 소리) 기능 개발</p>
+                        <p>🔔 집중모드(사용자가 설정한 시간 동안 알림을 받지 않는 기능) 적용</p>
+                        <p>🔔 macOS에서 앱이 사용 중인 경우 모바일로 알림을 받지 않도록 하는 기능 적용</p>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img class = "rect-img-extra-big" src="images/e2ee.png" onclick="window.open(this.src)"/>
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Messaging 종단간 암호화</h3>
+                        <b><p>Language : Swift</p>
+                        <p>Framework : RxSwift</p></b>
+                        <p>메시지에 종단간 암호화를 적용하여 고객 데이터를 보호하는 기능 개발 </p>
+                        <p>🔑 AES 키 생성 및 암복호화 로직 구현</p>
+                        <p>🔑 유저의 기기 변경 시 메시지 복호화에 필요한 키의 복구를 위한 자동인증 개발</p>
+                        <p>🔑 자동인증 요청 및 복구, 자동인증 실패로 인해 대기 중인 유저 확인 및 복구 구현</p>
+                        <p>🔑 관리자인 경우 인증키로 비밀키를 복구할 수 있는 로직 추가</p>
+                        <p>🔑 관리자 메뉴에 암호화 레벨 변경(높은 레벨일수록 높은 암호화 수준), 인증키 발급 및 재발급 구현</p>
+                        <p>🔑 암호화 과정이 정상적으로 이루어지지 않은 경우(네트워크/서버 오류 등으로 인한)의 예외처리</p>
+                        <p><a href="https://www.kakaowork.com/security">About Security in Kakaowork</a></p>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img class = "rect-img" src="images/group.jpeg" onclick="window.open(this.src)"/>
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>그룹사 채팅</h3>
+                        <b><p>Language : Swift</p>
+                        <p>Framework : RxSwift, SwiftUI</p></b>
+                        <p>🏢 그룹사로 등록된 회사들 간에 대화하는 기능 개발</p>
+                        <p>🏢 그룹사별 권한에 따른 파일 다운로드, 워터마크, 타 그룹사 멤버 초대 가능 여부 등의 처리</p>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img class = "rect-img" src="images/extern.jpeg" onclick="window.open(this.src)"/>
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>외부스페이스(타 회사) 채팅</h3>
+                        <b><p>Language : Swift</p>
+                        <p>Framework : RxSwift, SwiftUI</p></b>
+                        <p>🌎 타 회사 간 친구 추가 및 채팅이 가능하도록 하는 기능 개발</p>
+                        <p>🌎 프로필 링크 공유를 통한 친구 추가하기, 타 회사 멤버 목록 구현</p>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #projects -->
+
+    <div id="contact">
+        <h2>Contact</h2>
+        <div id="contact-form">
+            <h4>Mobile: +82 10-3320-0102</h4>
+            <h4>Email: wekdnjs@gmail.com</h4>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        @2024 Dawon’s Portfolio.
+                    </p>
+                    <p>
+                        Please don’t hesitate to call me. +82 10-3320-0102
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/wekdnjs" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
+</body>
+
+</html>
