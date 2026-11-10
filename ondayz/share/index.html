@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f2eb">
+  <meta name="apple-itunes-app" content="app-id=6788714558">
+  <meta property="og:title" content="온데이즈 기념일 공유">
+  <meta property="og:description" content="소중한 기념일이 도착했어요. 온데이즈에서 사진 위젯으로 간직해보세요.">
+  <meta property="og:type" content="website">
+  <title>온데이즈</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Apple SD Gothic Neo", sans-serif;
+      background: #f7f2eb;
+      color: #4b3b2b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: max(24px, env(safe-area-inset-top)) 20px max(24px, env(safe-area-inset-bottom));
+      background:
+        radial-gradient(circle at 20% 12%, rgba(229, 159, 98, 0.2), transparent 32%),
+        radial-gradient(circle at 82% 88%, rgba(217, 130, 43, 0.14), transparent 34%),
+        #f7f2eb;
+    }
+
+    main {
+      width: min(100%, 430px);
+      padding: 34px 26px 28px;
+      text-align: center;
+      background: #fffdf9;
+      border: 1px solid #efe4d6;
+      border-radius: 30px;
+      box-shadow: 0 24px 64px rgba(75, 59, 43, 0.1);
+    }
+
+    .mark {
+      width: 84px;
+      height: 84px;
+      margin: 0 auto 22px;
+      display: grid;
+      place-items: center;
+      border-radius: 26px;
+      background: #fff5e8;
+      color: #d9822b;
+      font-size: 38px;
+      box-shadow: inset 0 0 0 1px #efe4d6;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      letter-spacing: -0.04em;
+    }
+
+    p {
+      margin: 14px 0 0;
+      color: #7b6855;
+      font-size: 17px;
+      line-height: 1.55;
+      word-break: keep-all;
+    }
+
+    a {
+      min-height: 56px;
+      margin-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      background: #e59f62;
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(217, 130, 43, 0.22);
+    }
+
+    small {
+      margin-top: 18px;
+      display: block;
+      color: #9b8977;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="mark" aria-hidden="true">🗓️</div>
+    <h1 id="title">소중한 기념일이 도착했어요</h1>
+    <p id="message">온데이즈를 설치하고 원래 공유 링크를 다시 누르면 사진과 일정이 그대로 열려요.</p>
+    <a id="download" href="https://apps.apple.com/app/id6788714558">App Store에서 온데이즈 받기</a>
+    <small id="privacy">공유된 사진과 일정은 암호화되며 30일 후 자동으로 삭제됩니다.</small>
+  </main>
+  <script>
+    const translations = {
+      en: {
+        title: "A meaningful day is waiting for you",
+        message: "Install Ondayz, then tap the original shared link again to open the photos and date.",
+        download: "Get Ondayz on the App Store",
+        privacy: "Shared photos and dates are encrypted and deleted automatically after 30 days."
+      },
+      ja: {
+        title: "大切な記念日が届きました",
+        message: "Ondayzをインストールして元の共有リンクをもう一度タップすると、写真と日付が開きます。",
+        download: "App StoreでOndayzを入手",
+        privacy: "共有された写真と日付は暗号化され、30日後に自動で削除されます。"
+      },
+      es: {
+        title: "Te han compartido un día especial",
+        message: "Instala Ondayz y vuelve a tocar el enlace original para abrir las fotos y la fecha.",
+        download: "Descargar Ondayz en App Store",
+        privacy: "Las fotos y fechas compartidas se cifran y se eliminan automáticamente después de 30 días."
+      }
+    };
+    const language = navigator.language.slice(0, 2);
+    const translation = translations[language];
+    if (translation) {
+      document.documentElement.lang = language;
+      for (const key of ["title", "message", "download", "privacy"]) {
+        document.getElementById(key).textContent = translation[key];
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "XCPNQVQQ9N.com.ysyd.DayPhotoWidget"
+        ],
+        "components": [
+          {
+            "/": "/ondayz/share*"
+          }
+        ]
+      }
+    ]
+  }
+}
