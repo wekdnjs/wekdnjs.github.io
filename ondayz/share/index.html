@@ -85,6 +85,16 @@
       box-shadow: 0 10px 24px rgba(217, 130, 43, 0.22);
     }
 
+    a.secondary {
+      min-height: 50px;
+      margin-top: 12px;
+      border: 1px solid #e7d8c7;
+      background: transparent;
+      color: #7b6855;
+      font-size: 15px;
+      box-shadow: none;
+    }
+
     small {
       margin-top: 18px;
       display: block;
@@ -98,37 +108,44 @@
   <main>
     <div class="mark" aria-hidden="true">🗓️</div>
     <h1 id="title">소중한 기념일이 도착했어요</h1>
-    <p id="message">온데이즈를 설치하고 원래 공유 링크를 다시 누르면 사진과 일정이 그대로 열려요.</p>
-    <a id="download" href="https://apps.apple.com/app/id6788714558">App Store에서 온데이즈 받기</a>
+    <p id="message">온데이즈가 설치되어 있다면 사진과 일정을 앱에서 바로 열어보세요.</p>
+    <a id="open-app" href="#">온데이즈에서 열기</a>
+    <a class="secondary" id="download" href="https://apps.apple.com/app/id6788714558">앱이 없다면 App Store에서 받기</a>
     <small id="privacy">공유된 사진과 일정은 암호화되며 30일 후 자동으로 삭제됩니다.</small>
   </main>
   <script>
     const translations = {
       en: {
         title: "A meaningful day is waiting for you",
-        message: "Install Ondayz, then tap the original shared link again to open the photos and date.",
-        download: "Get Ondayz on the App Store",
+        message: "If Ondayz is installed, open the shared photos and date directly in the app.",
+        open: "Open in Ondayz",
+        download: "No app yet? Get Ondayz on the App Store",
         privacy: "Shared photos and dates are encrypted and deleted automatically after 30 days."
       },
       ja: {
         title: "大切な記念日が届きました",
-        message: "Ondayzをインストールして元の共有リンクをもう一度タップすると、写真と日付が開きます。",
-        download: "App StoreでOndayzを入手",
+        message: "Ondayzがインストールされている場合、共有された写真と日付をアプリですぐに開けます。",
+        open: "Ondayzで開く",
+        download: "アプリがない場合はApp Storeから入手",
         privacy: "共有された写真と日付は暗号化され、30日後に自動で削除されます。"
       },
       es: {
         title: "Te han compartido un día especial",
-        message: "Instala Ondayz y vuelve a tocar el enlace original para abrir las fotos y la fecha.",
-        download: "Descargar Ondayz en App Store",
+        message: "Si tienes Ondayz instalado, abre las fotos y la fecha compartidas directamente en la app.",
+        open: "Abrir en Ondayz",
+        download: "¿No tienes la app? Descarga Ondayz",
         privacy: "Las fotos y fechas compartidas se cifran y se eliminan automáticamente después de 30 días."
       }
     };
+    const openApp = document.getElementById("open-app");
+    openApp.href = `ondayz://share${window.location.hash}`;
     const language = navigator.language.slice(0, 2);
     const translation = translations[language];
     if (translation) {
       document.documentElement.lang = language;
-      for (const key of ["title", "message", "download", "privacy"]) {
-        document.getElementById(key).textContent = translation[key];
+      for (const key of ["title", "message", "open", "download", "privacy"]) {
+        const elementID = key === "open" ? "open-app" : key;
+        document.getElementById(elementID).textContent = translation[key];
       }
     }
   </script>
