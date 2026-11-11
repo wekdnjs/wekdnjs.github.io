@@ -43,19 +43,6 @@
       box-shadow: 0 24px 64px rgba(75, 59, 43, 0.1);
     }
 
-    .mark {
-      width: 84px;
-      height: 84px;
-      margin: 0 auto 22px;
-      display: grid;
-      place-items: center;
-      border-radius: 26px;
-      background: #fff5e8;
-      color: #d9822b;
-      font-size: 38px;
-      box-shadow: inset 0 0 0 1px #efe4d6;
-    }
-
     h1 {
       margin: 0;
       font-size: 30px;
@@ -106,11 +93,10 @@
 </head>
 <body>
   <main>
-    <div class="mark" aria-hidden="true">🗓️</div>
     <h1 id="title">소중한 기념일이 도착했어요</h1>
     <p id="message">온데이즈가 설치되어 있다면 사진과 일정을 앱에서 바로 열어보세요.</p>
     <a id="open-app" href="#">온데이즈에서 열기</a>
-    <a class="secondary" id="download" href="https://apps.apple.com/app/id6788714558">앱이 없다면 App Store에서 받기</a>
+    <a class="secondary" id="download" href="https://apps.apple.com/app/id6788714558">App Store에서 받기</a>
     <small id="privacy">공유된 사진과 일정은 암호화되며 30일 후 자동으로 삭제됩니다.</small>
   </main>
   <script>
@@ -119,21 +105,21 @@
         title: "A meaningful day is waiting for you",
         message: "If Ondayz is installed, open the shared photos and date directly in the app.",
         open: "Open in Ondayz",
-        download: "No app yet? Get Ondayz on the App Store",
+        download: "Get Ondayz on the App Store",
         privacy: "Shared photos and dates are encrypted and deleted automatically after 30 days."
       },
       ja: {
         title: "大切な記念日が届きました",
         message: "Ondayzがインストールされている場合、共有された写真と日付をアプリですぐに開けます。",
         open: "Ondayzで開く",
-        download: "アプリがない場合はApp Storeから入手",
+        download: "App StoreでOndayzを入手",
         privacy: "共有された写真と日付は暗号化され、30日後に自動で削除されます。"
       },
       es: {
         title: "Te han compartido un día especial",
         message: "Si tienes Ondayz instalado, abre las fotos y la fecha compartidas directamente en la app.",
         open: "Abrir en Ondayz",
-        download: "¿No tienes la app? Descarga Ondayz",
+        download: "Descargar Ondayz en App Store",
         privacy: "Las fotos y fechas compartidas se cifran y se eliminan automáticamente después de 30 días."
       }
     };
